@@ -177,16 +177,8 @@ export default function Hero() {
         </div>
 
         {/* Photo */}
-        <div className="animate-fade-up delay-600 hidden md:flex justify-center">
-          <div className="relative">
-            {/* Decorative frame */}
-            <div
-              className="absolute -inset-3 -z-10"
-              style={{
-                background: "linear-gradient(135deg, var(--accent-dim), transparent 60%)",
-                opacity: 0.4,
-              }}
-            />
+        <div className="animate-fade-up delay-600 flex justify-center order-first md:order-last">          <div className="relative">
+
             {/* Corner accents */}
             <div className="absolute -top-2 -left-2 w-8 h-8"
               style={{ borderTop: "2px solid var(--accent)", borderLeft: "2px solid var(--accent)" }} />
