@@ -176,36 +176,32 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Stats / callout */}
-        <div className="animate-fade-up delay-600 hidden md:grid grid-cols-2 gap-4">
-          {[
-            { num: "20+", label: "Years Experience" },
-            { num: "5+", label: "Industries" },
-            { num: "4", label: "Major Roles" },
-            { num: "∞", label: "Coffee Consumed" },
-          ].map((s) => (
+        {/* Photo */}
+        <div className="animate-fade-up delay-600 hidden md:flex justify-center">
+          <div className="relative">
+            {/* Decorative frame */}
             <div
-              key={s.label}
-              className="p-6 card-hover"
+              className="absolute -inset-3 -z-10"
               style={{
-                background: "var(--bg-card)",
-                border: "1px solid var(--border-subtle)",
+                background: "linear-gradient(135deg, var(--accent-dim), transparent 60%)",
+                opacity: 0.4,
               }}
-            >
-              <div
-                className="font-display text-4xl mb-1 text-gradient"
-                style={{ lineHeight: 1 }}
-              >
-                {s.num}
-              </div>
-              <div
-                className="font-mono text-xs tracking-widest uppercase"
-                style={{ color: "var(--text-muted)" }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
+            />
+            {/* Corner accents */}
+            <div className="absolute -top-2 -left-2 w-8 h-8"
+              style={{ borderTop: "2px solid var(--accent)", borderLeft: "2px solid var(--accent)" }} />
+            <div className="absolute -bottom-2 -right-2 w-8 h-8"
+              style={{ borderBottom: "2px solid var(--accent)", borderRight: "2px solid var(--accent)" }} />
+
+            <img
+              src="/natasha.jpg"
+              alt="Natasha Drozdova"
+              className="w-80 h-96 object-cover object-top"
+              style={{
+                filter: "brightness(0.95) contrast(1.05)",
+              }}
+            />
+          </div>
         </div>
       </div>
 
